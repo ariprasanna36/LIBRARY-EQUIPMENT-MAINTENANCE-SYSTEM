@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Library Equipment Maintenance System</title>
+<style>
+  :root{
+    --ink:#1c2430;
+    --sub:#4a5568;
+    --accent:#2b6cb0;
+    --accent-soft:#eaf2fb;
+    --line:#e2e8f0;
+    --bg:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.55;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:64px 32px 96px;}
+
+  header.hero{
+    text-align:center;
+    padding-bottom:40px;
+    margin-bottom:48px;
+    border-bottom:1px solid var(--line);
+  }
+  header.hero h1{
+    font-size:2.1rem;
+    letter-spacing:0.02em;
+    margin:0 0 8px;
+  }
+  header.hero p.tagline{
+    font-size:1.05rem;
+    color:var(--sub);
+    margin:0 0 20px;
+  }
+  header.hero p.meta{
+    font-size:0.9rem;
+    color:#718096;
+    margin:0;
+  }
+
+  section{margin-bottom:52px;}
+  section h2{
+    font-size:1.4rem;
+    margin:0 0 6px;
+  }
+  section p.subtitle{
+    color:var(--sub);
+    margin:0 0 20px;
+    font-size:0.98rem;
+  }
+  section > p{margin:0 0 14px;color:var(--ink);}
+
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin-top:8px;
+  }
+  .card{
+    background:var(--accent-soft);
+    border-radius:10px;
+    padding:18px 20px;
+  }
+  .card h3{
+    font-size:1rem;
+    margin:0 0 6px;
+    color:var(--accent);
+  }
+  .card p{
+    margin:0;
+    font-size:0.92rem;
+    color:var(--sub);
+  }
+
+  .list-simple{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 24px;
+    padding:0;
+    margin:8px 0 0;
+    list-style:none;
+  }
+  .list-simple li{
+    font-size:0.95rem;
+    color:var(--ink);
+    padding:8px 14px;
+    background:#f7fafc;
+    border-radius:6px;
+  }
+
+  .flow{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:6px;
+    margin-top:12px;
+  }
+  .flow .step{
+    background:var(--accent-soft);
+    color:var(--accent);
+    padding:10px 16px;
+    border-radius:8px;
+    font-size:0.9rem;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .flow .arrow{color:#a0aec0;font-size:1.1rem;}
+
+  .entities{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:10px;
+  }
+  .entity{
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:14px 16px;
+  }
+  .entity h3{
+    margin:0 0 4px;
+    font-size:0.95rem;
+  }
+  .entity p{
+    margin:0;
+    font-size:0.82rem;
+    color:var(--sub);
+  }
+
+  .callout{
+    background:var(--accent-soft);
+    border-radius:10px;
+    padding:20px 22px;
+    font-size:0.98rem;
+    color:var(--ink);
+  }
+
+  footer{
+    text-align:center;
+    color:#a0aec0;
+    font-size:0.82rem;
+    margin-top:40px;
+  }
+
+  @media (max-width:600px){
+    .card-grid{grid-template-columns:1fr;}
+    .entities{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>Library Equipment Maintenance System</h1>
+    <p class="tagline">A Smart Approach to Managing Library Assets</p>
+    <p class="meta">Department of Library &amp; Information Science · September 2026</p>
+  </header>
+
+  <section>
+    <h2>Introduction</h2>
+    <p>Libraries today rely on a growing base of physical and digital equipment — computers, printers, scanners, projectors, RFID readers, and more.</p>
+    <p>A Library Equipment Maintenance System (LEMS) is a centralized digital platform that tracks, schedules, and manages the upkeep of all this equipment, replacing scattered paper logs and informal reporting with a single source of truth for equipment health.</p>
+    <ul class="list-simple">
+      <li>Computers &amp; Terminals</li>
+      <li>Printers &amp; Scanners</li>
+      <li>RFID &amp; Security Gates</li>
+    </ul>
+    <p style="margin-top:16px;"><strong>Why it matters:</strong> Equipment downtime directly disrupts patron services and staff workflows.</p>
+  </section>
+
+  <section>
+    <h2>Problem Statement</h2>
+    <p class="subtitle">Manual equipment tracking creates avoidable friction</p>
+    <div class="card-grid">
+      <div class="card"><h3>Lost Records</h3><p>Paper logs and spreadsheets go missing or fall out of date.</p></div>
+      <div class="card"><h3>Delayed Repairs</h3><p>Issues sit unreported for days before anyone notices.</p></div>
+      <div class="card"><h3>No Accountability</h3><p>It's unclear who reported, assigned, or resolved an issue.</p></div>
+      <div class="card"><h3>Equipment Downtime</h3><p>Unavailable devices interrupt research and daily operations.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Objectives</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Automate Tracking</h3><p>Digitally register and monitor every piece of equipment in real time.</p></div>
+      <div class="card"><h3>Schedule Maintenance</h3><p>Plan preventive maintenance instead of reacting to breakdowns.</p></div>
+      <div class="card"><h3>Reduce Downtime</h3><p>Speed up fault reporting and technician response.</p></div>
+      <div class="card"><h3>Generate Reports</h3><p>Produce maintenance history and performance reports on demand.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Scope of the System</h2>
+    <p class="subtitle">Equipment categories covered by the platform</p>
+    <ul class="list-simple">
+      <li>Computers &amp; Terminals</li>
+      <li>Printers &amp; Scanners</li>
+      <li>Projectors &amp; Displays</li>
+      <li>RFID Readers &amp; Gates</li>
+      <li>Furniture &amp; Fixtures</li>
+      <li>Network &amp; Server Equipment</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>System Features</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Equipment Inventory</h3><p>Central registry of all assets with location &amp; status.</p></div>
+      <div class="card"><h3>Maintenance Scheduling</h3><p>Preventive service plans on a recurring calendar.</p></div>
+      <div class="card"><h3>Fault / Issue Reporting</h3><p>Staff log problems instantly, with photos &amp; priority.</p></div>
+      <div class="card"><h3>Technician Assignment</h3><p>Route issues to the right technician automatically.</p></div>
+      <div class="card"><h3>Maintenance History</h3><p>Full service log per asset for lifecycle tracking.</p></div>
+      <div class="card"><h3>Alerts &amp; Notifications</h3><p>Reminders for due services and overdue repairs.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>System Architecture / Workflow</h2>
+    <p class="subtitle">How a maintenance request flows through the system</p>
+    <div class="flow">
+      <span class="step">Equipment Registration</span><span class="arrow">→</span>
+      <span class="step">Issue Reporting</span><span class="arrow">→</span>
+      <span class="step">Maintenance Scheduling</span><span class="arrow">→</span>
+      <span class="step">Repair / Service</span><span class="arrow">→</span>
+      <span class="step">Status Update</span><span class="arrow">→</span>
+      <span class="step">Reporting</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Technology Stack</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Frontend</h3><p>React.js / responsive web dashboard for staff &amp; technicians.</p></div>
+      <div class="card"><h3>Backend</h3><p>Node.js (Express) REST API handling business logic.</p></div>
+      <div class="card"><h3>Database</h3><p>MySQL / PostgreSQL for equipment &amp; maintenance records.</p></div>
+      <div class="card"><h3>Notifications</h3><p>Email / SMS gateway for alerts and reminders.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Database Design</h2>
+    <p class="subtitle">Key entities and their relationships</p>
+    <div class="entities">
+      <div class="entity"><h3>Equipment</h3><p>ID, Name, Category, Location</p></div>
+      <div class="entity"><h3>Technician</h3><p>ID, Name, Specialty, Contact</p></div>
+      <div class="entity"><h3>Location</h3><p>ID, Building, Floor, Room</p></div>
+      <div class="entity"><h3>Status</h3><p>ID, State, Updated At</p></div>
+      <div class="entity"><h3>Maintenance Log</h3><p>ID, Equip ID, Date, Action</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Benefits</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Reduced Downtime</h3><p>Faster fault detection and repair turnaround.</p></div>
+      <div class="card"><h3>Cost Savings</h3><p>Preventive care avoids costly emergency repairs.</p></div>
+      <div class="card"><h3>Better Planning</h3><p>Data-backed maintenance calendars and budgets.</p></div>
+      <div class="card"><h3>Extended Equipment Life</h3><p>Regular servicing prolongs asset lifespan.</p></div>
+      <div class="card"><h3>Data-Driven Decisions</h3><p>Historical reports guide procurement &amp; policy.</p></div>
+      <div class="card"><h3>Improved Accountability</h3><p>Clear ownership at every step of the process.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Future Enhancements</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Mobile App Integration</h3><p>On-the-go reporting and technician dispatch from a phone.</p></div>
+      <div class="card"><h3>Predictive Maintenance (AI)</h3><p>Machine learning flags equipment likely to fail before it does.</p></div>
+      <div class="card"><h3>QR / Barcode Scanning</h3><p>Instant equipment lookup and check-in via a quick scan.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Conclusion</h2>
+    <div class="callout">
+      <p style="margin-bottom:10px;">A Library Equipment Maintenance System turns reactive, paper-based upkeep into a proactive, data-driven process.</p>
+      <p style="margin-bottom:10px;">By automating tracking, scheduling, and reporting, libraries can cut downtime, extend asset life, and make smarter budget decisions.</p>
+      <p style="margin:0;">Adopting this system is a practical step toward a more reliable and efficient library operation.</p>
+    </div>
+  </section>
+
+  <footer>Library Equipment Maintenance System — Department of Library &amp; Information Science, September 2026</footer>
+
+</div>
+</body>
+</html>
