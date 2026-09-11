@@ -1,4 +1,4 @@
-![https://github.com/ariprasanna36/LIBRARY-EQUIPMENT-MAINTENANCE-SYSTEM/blob/27d61c7ae5fa2bfba090b296da89508246acee2c/ChatGPT%20Image%20Sep%2011%2C%202026%2C%2002_14_38%20PM%20(1).png}
+![image alt]{https://github.com/ariprasanna36/LIBRARY-EQUIPMENT-MAINTENANCE-SYSTEM/blob/27d61c7ae5fa2bfba090b296da89508246acee2c/ChatGPT%20Image%20Sep%2011%2C%202026%2C%2002_14_38%20PM%20(1).png}
 📚 Library Equipment Maintenance System (LEMS)
 
 A centralized digital platform for tracking, scheduling, and managing the maintenance of library equipment — replacing scattered paper logs and informal reporting with a single source of truth for equipment health.
